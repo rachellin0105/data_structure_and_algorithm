@@ -1,0 +1,10 @@
+程式主旨:
+	建立min-max heap，和新增或移除最大資料時，順利維護min-max heap的結構。
+遇到的問題:
+	子孫不滿四個，孩子不滿兩個以及資料小於三個的min-max heap 
+	解決方法:
+		子孫不滿四個和孩子不滿兩個時，需分開比較大小，並做index的維護，避免超出vector index 範圍。
+		資料小於三個時，且需要刪到min heap 的root，因此要特別用heap的大小(總資料量)來分別出來，如果所要求的數量為全部的話，需將最小值也印出來。
+問答:
+	Q: min-max heap的缺點?
+	A: 每次刪除資料都需要從level2或level1(let min-max heap's root is at level1)開始維護，如果運氣不好，要走訪到倒數前兩個level，花在維護上的時間會太多，雖然他取資料的速度很快。
